@@ -1,56 +1,57 @@
-# Wizard Duel
+⚙️ Automata Wizard Duel: Overdrive
+Automata Wizard Duel: Overdrive is a fast-paced, wave-based survival arena shooter built entirely in HTML5 Canvas and Vanilla JavaScript. You play as an anomalous entity [SYS.YOU] trapped within a massive, procedurally generated technical schematic. Your objective is to survive endless waves of rogue Automata Nodes by utilizing precise aiming, dodging, and a technical combo-input system.
 
-## Overview
-Wizard Duel is a browser-based 2D game built with HTML5 Canvas and JavaScript. You control a wizard, move around the arena, and fight enemies using spells and positioning.
+✨ Features
+Massive Schematic Arena: Battle in a massive 1600x960 circular arena, featuring procedural circuit traces, concentric core rings, and bounding data nodes.
 
-## Features
-- Real-time movement system
-- Enemy AI behavior
-- Spell casting / attack mechanics
-- Score, lives, and game state tracking
-- Canvas-based rendering loop
+Technical Input Buffer: String together rapid keystrokes to execute powerful abilities, phase-shifts, and ultimate attacks.
 
-## Controls
-- Move Up: W / Arrow Up
-- Move Down: S / Arrow Down
-- Move Left: A / Arrow Left
-- Move Right: D / Arrow Right
-- Attack / Cast Spell: Space
+Procedural Pixel-Art Rendering: All entities, particle effects, and environments are drawn natively in canvas—no external image assets are required.
 
-## Project Structure
-wizard-duel/
-├── index.html      (main file to run the game)
-├── style.css       (styles)
-├── script.js       (game logic)
-├── assets/         (optional images and sounds)
-└── README.md
+Dynamic Wave Scaling: The system throws increasingly difficult combinations of enemies at you, scaling their speed, health, and numbers endlessly.
 
-## How to Run
-1. Download or extract the project folder
-2. Open index.html in a browser (Chrome or Edge recommended)
-3. Play directly — no installation required
+Seamless Reboot: Instant restart upon system failure (death) without needing to refresh the page.
 
-## Game Loop (How it Works)
-1. Input is read from the keyboard
-2. Game state updates (player, enemies, collisions)
-3. Canvas is redrawn every frame
+🎮 Controls
+[W, A, S, D]: Navigate the arena.
 
-## Known Issues
-- Sounds may not work if audio files are missing
-- Holding movement or attack keys may cause unintended behavior
-- Performance may drop with many enemies on screen
+[Mouse]: Target crosshairs.
 
-## Future Improvements
-- Add finite state machine (FSM) for enemies
-- Add attack cooldown system
-- Improve collision detection
-- Add more enemy types and difficulty scaling
-- Add UI controls (HUD toggle, settings)
-- Add sound system with proper loading
+[Left Click]: Execute basic attack (Standard Projectile).
 
-## Purpose
-This project is useful for learning:
-- HTML5 Canvas
-- JavaScript game loops
-- Event handling
-- Basic game architecture
+[Hold Left Click]: Charge power (Releases a high-damage, heavy projectile).
+
+⚡ Combo System (The Buffer)
+Input sequences rapidly into the buffer to trigger advanced subroutines.
+
+[Q] - [Q] - [Q] : Overclock
+Temporarily bypasses your mana constraints and fire rate, unleashing a massive stream of rapid-fire projectiles.
+
+[E] - [E] - [E] : Aegis Protocol
+Generates a temporary invulnerability shield to absorb incoming attacks.
+
+[Q] - [W] - [E] : System Override
+Consumes 50 Mana to unleash a devastating 12-directional blast that clears the surrounding area.
+
+[Direction] x3 : Phase Shift (Dash)
+Tap [W-W-W], [A-A-A], [S-S-S], or [D-D-D] rapidly to instantly phase-dash a short distance in that specific direction. Consumes 30 Mana.
+
+👾 Threat Catalog (Automata Nodes)
+As you progress through the waves, the system will deploy different types of defense nodes to neutralize you:
+
+Drone Nodes (Orange): Small, highly aggressive swarm units. They do not fire projectiles but will charge directly at you to deal heavy collision damage.
+
+Artillery Nodes (Red): Tactical sniper units. They will attempt to maintain a specific distance from you, strafing to avoid your shots while firing high-velocity projectiles.
+
+Juggernaut Nodes (Purple): Massive, slow-moving tank units. They have enormous health pools, slowly advance toward the center of the arena, and periodically unleash massive 8-directional area-of-effect blasts.
+
+🚀 Installation & Setup
+Extract the game files to a local folder. Ensure the assets/ folder contains your .wav sound files (cast.wav, hit.wav, charge.wav, ultimate.wav).
+
+Because the game relies on HTML5 Audio, modern browsers require you to interact with the page before audio can play.
+
+For the best experience, run the game through a local web server (e.g., VS Code Live Server, Python http.server, or Node http-server).
+
+Open index.html in your web browser.
+
+Click INITIALIZE SYSTEM to begin.
